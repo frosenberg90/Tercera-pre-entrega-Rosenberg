@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title> Hacer pedido </title>
+{% endblock title_head %}
+
+
+
+{% block h1_header %}
+¡Elegí el sabor que mas te guste!
+{% endblock h1_header %}
+
+{% block main %}
+
+{% comment %} <form action="" method="POST"> 
+    {% csrf_token %}
+    <p>
+        Tipo
+    
+    <input type= "text" name="tipo">
+    </p>
+    <p>
+        Descripcion
+    
+    <input type= "text" name="Descripcion">
+    </p>
+    <p>
+        Cantidad
+    
+    <input type= "number" name="Cantidad">
+    </p>
+    <p>
+        Costo
+    
+    <input type= "number" name="costo">
+    </p>
+    
+    <input type="submit" value="Pedir">
+    {% comment %} <button>Pedir</button> {% endcomment %}  
+
+{% comment %} </form> {% endcomment %} 
+
+<form action="" method="POST"> 
+    {% csrf_token %}
+
+    {{formulario}}
+   
+    <input type="submit" value="Pedir">
+  
+</form>
+
+{% endblock main %}
