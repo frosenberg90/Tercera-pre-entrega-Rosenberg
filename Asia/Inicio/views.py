@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 """ from django.http import HttpResponse
 from django.template import loader """
-from Inicio.models import Productos
+from Inicio.models import Productos, Ventas, Clientes
 from Inicio.forms import HacerPedidoFormulario
 # Create your views here.
 def inicio (request):
@@ -59,3 +59,19 @@ def hacer_pedido(request):
             
     formulario = HacerPedidoFormulario()
     return render (request, 'inicio/pedidos.html', {'formulario':formulario})
+
+
+def Ingresar (request):
+
+    if request.method == 'POST':
+        nombre = request.POST.get('nombre')
+        apellido = request.POST.get('apellido')
+        edad = request.POST.get('edad')
+        genero = request.POST.get('genero')
+    
+    
+        usuario = Clientes(Nombre=nombre, Apellido=apellido, Edad=edad, genero=genero)
+        usuario.save()
+    
+    
+    return render (request, 'inicio/clientes.html', {})
