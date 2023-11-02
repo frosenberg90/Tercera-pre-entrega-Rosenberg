@@ -26,9 +26,10 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href={% url "inicio" %}>Inicio</a>
-                <a class="btn btn-primary" href={% url "productos" %}>Productos</a>
                 <a class="btn btn-primary" href={% url "pedidos" %}>Pedidos</a>
-                <a class="btn btn-primary" href={% url "productos" %}>Promociones</a>
+                <a class="btn btn-primary" href={% url "productos" %}>Productos</a>
+                <a class="btn btn-primary" href={% url "clientes" %}>Clientes</a>
+                <a class="btn btn-primary" href={% url "promos" %}>Promociones</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -50,7 +51,7 @@
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            {% comment %} <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <!-- Email address input-->
                                 <div class="row">
                                     <div class="col">
@@ -76,7 +77,7 @@
                                 <!-- This is what your users will see when there is-->
                                 <!-- an error submitting the form-->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            </form>
+                            </form> {% endcomment %}
                         </div>
                     </div>
                 </div>

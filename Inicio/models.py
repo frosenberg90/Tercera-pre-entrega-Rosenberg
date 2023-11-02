@@ -12,20 +12,21 @@ class Productos(models.Model):
     def __str__(self):
         return f'{self.id}-{self.tipo}-{self.descripcion}-{self.cantidad}'
 
-class Ventas(models.Model):
-    producto = models.CharField(max_length=30)
-    cantidad = models.IntegerField()
+class Promos(models.Model):
 
+    Promo = models.CharField(max_length=30)
+    Cantidad = models.IntegerField()
+    
         
         
     def __str__(self):
-        return f'{self.id}-{self.producto}-{self.cantidad}'
+        return f'{self.Promo}-{self.Cantidad}'
 
 class Clientes(models.Model):
     Nombre = models.CharField(max_length=30)
     Apellido = models.CharField(max_length=30)
     Edad=models.IntegerField()
-    genero=models.CharField()      
+    genero=models.CharField(max_length=2)      
         
     def __str__(self):
         return f'{self.id}-{self.Apellido}-{self.genero}'

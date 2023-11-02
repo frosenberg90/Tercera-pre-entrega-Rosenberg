@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title> Clientes </title>
+{% endblock title_head %}
+
+
+
+{% block h1_header %}
+¡Carga tus datos para mas promociones!
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="" method="POST"> 
+    {% csrf_token %}
+    <p>
+        Nombre
+    
+    <input type= "text" name="nombre">
+    </p>
+    <p>
+        Apellido
+    
+    <input type= "text" name="apellido">
+    </p>
+    <p>
+        Edad
+    
+    <input type= "number" name="edad">
+    </p>
+    <p>
+        Genero
+
+    <input type= "text" name="genero">
+    </p>
+    
+    <input type="submit" value="Cargar">
+    {% comment %} <button>Pedir</button> {% endcomment %}  
+
+</form> 
+
+{% endblock main %}

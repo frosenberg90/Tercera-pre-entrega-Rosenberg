@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title> Promociones </title>
+{% endblock title_head %}
+
+
+
+{% block h1_header %}
+¡Elegi tu promoción y ahorra!
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="" method="POST"> 
+    {% csrf_token %}
+<p>
+    Salmon Lover/Mix and Try
+    <input type= "text" name="promo">
+</p>
+<p>
+    Cantidad
+
+<input type= "number" name="cantidad">
+</p>
+
+<input type="submit" value="Pedir Promo">
+</form>
+{% endblock main %}
