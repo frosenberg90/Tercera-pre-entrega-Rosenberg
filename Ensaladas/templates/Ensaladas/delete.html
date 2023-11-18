@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Eliminar Poke</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Eliminar Poke
+{% endblock h1_header %}
+
+{% block main %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    Desea eliminar el Poke {{Salads.Tipo}} - {{Salads.Sabor}} - {{Salads.Cantidad}}?
+    <input type="submit" value="Confirmar">
+</form>
+
+{% endblock main %}

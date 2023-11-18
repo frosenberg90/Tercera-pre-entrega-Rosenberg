@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Salads {{Salads.id}}</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Salads {{salads.id}}
+{% endblock h1_header %}
+
+{% block main %}
+
+<ul>
+    <li>Tipo: {{salads.Tipo}}</li>
+    <li>Sabor: {{salads.Sabor}}</li>
+    <li>Ingred_Adic: {{salads.Adic_ingre}}</li>
+    <li>Cantidad: {{salads.Cantidad}}</li>
+</ul>
+
+{% endblock main %}

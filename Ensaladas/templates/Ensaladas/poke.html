@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title_head %}
+<title>Ensaladas</title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Poke Bowls
+{% endblock h1_header %}
+
+{% block main %}
+<p>
+    <a href={% url "crear_ensaladas" %}>Pedir mi Poke</a>
+</p>
+
+<form action={% url "ensaladas" %}>
+    <input type="text" name="marca" placeholder="Salmon, Camaron...">
+    <input type="submit" value="Buscar">
+</form>
+
+{% if listado_de_ensaladas %}
+<ul>
+    {% for ensaladas in listado_de_ensaladas %}
+    <li><a href={% url "detalle_ensaladas" ensaladas.id %}>{{ensaladas}}</a> | <a href={% url "actualizar_ensaladas" ensaladas.id %}>Actualizar</a> | <a href={% url "eliminar_ensaladas" ensaladas.id %}>Eliminar</a>
+    </li>
+        {% endfor %}
+</ul>
+{% else %}
+<p>No se encontraron Ensaladas.</p>
+{% endif %}
+
+{% endblock main %}

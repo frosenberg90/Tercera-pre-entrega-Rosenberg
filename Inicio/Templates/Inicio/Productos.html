@@ -12,6 +12,11 @@ Los pedidos son:
 {% endblock h1_header %}
 
 {% block main %}
+
+<p>
+    <a href= {% url "pedidos" %}> "Realizar Pedido" </a>
+
+</p>
 <form action="">
     <input type="text" name= "tipo" placeholder="Makis, Uramakis...">
     <input type="submit" value="Buscar">
@@ -23,7 +28,9 @@ Los pedidos son:
 <ul>
 
     {% for Productos in Listado_pedidos %}
-    <li>{{Productos}}</li>
+    <li>{{Productos}} | <a href={% url "actualizar_productos" Productos.id %} >Modificar</a> |  | <a href={% url "eliminar_productos" Productos.id %} >Eliminar</a> | 
+    | <a href={% url "detalle_productos" Productos.id %} >Detalle</a> | |</li>
+    
     {% endfor %}
 
 </ul>

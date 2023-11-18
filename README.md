@@ -12,3 +12,9 @@
     Productos contiene esta base de datos y la misma nos permite buscar entre los productos que se pidieron.
     Clientes nos permite generar una base de datos para luego asignar descuento, pidiendo Nombre-Apellido-Edad-Genero
     Y por último podemos comprar promociones de solo Salmón o un Mix de rolls y esto también nos genera una BD.
+
+# Entrega Final
+    En el video voy mostrando todos los pasos que tiene la pagina que fue creada con el fin de ser una pagina para realizar pedidos en nuestro emprendimiento. Luego con la pràctica le ire agregando más funcionalidades. 
+    Tiene 4 apartados: Productos principales, ensaladas, promociones y una de clientes para que los mismos agreguen sus datos.
+
+    Respecto a los usuarios, pueden ver sus perfiles y adempas editarlos como agregarles un avatar.
